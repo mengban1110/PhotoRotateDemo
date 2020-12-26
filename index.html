@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>图片旋转认证Demo</title>
+		<link rel="stylesheet" href="./css/RVerify.css" />
+	</head>
+	<body>
+		test
+	</body>
+	<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="./js/RVerify.js"></script>
+	<script type="text/javascript">
+		RVerify.configure({
+			tolerance: 10,
+			duration: 500,
+			mask: 0.5,
+			title: "Authentication",
+			text: "Make the image angle positive.",
+			extra: "View on Github",
+			album: [
+				"http://att3.citysbs.com/200x200/hangzhou/2020/04/15/11/dd6719bd4287d9efd49434c43563a032_v2_.jpg",
+				"https://c-ssl.duitang.com/uploads/item/201707/10/20170710210234_y3Kf5.thumb.1000_0.jpeg",
+				"http://pic2.zhimg.com/50/v2-be54dda1c19aaeab4f90bcb699057d03_hd.jpg",
+				"http://5b0988e595225.cdn.sohucs.com/q_70,c_zoom,w_640/images/20181226/97d5877e0ac1445980e755225514efc5.jpeg"
+			]
+		})
+		
+		RVerify.action(function(res) {
+			console.log(res);
+		});
+	</script>
+</html>
